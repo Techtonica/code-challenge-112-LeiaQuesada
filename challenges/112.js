@@ -23,10 +23,16 @@
 // c.getValue(); // now should be 2
 // ```
 
+
+// use let keyword and declare var in global scope to access var outside of funct
+let counter = 0;
 function createCounter(startingValue) {
-  const counter = startingValue;
+  // reassign var value
+  counter = startingValue;
   const newObject = {
     getValue: function() {
+      // incrementer
+      counter++;
       return counter;
     }
   };
